@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130225073756) do
+ActiveRecord::Schema.define(:version => 20130225074203) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(:version => 20130225073756) do
     t.string   "ali_g_quote"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "content"
+    t.date     "due_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
